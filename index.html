@@ -19,6 +19,7 @@
 </head>
 <body>
     <img id="bolinha" src="img/pokebola-removebg-preview.png" alt="Bolinha">
+    
 
     <script>
         const bolinha = document.getElementById('bolinha');
@@ -40,5 +41,33 @@
             bolinha.style.top = y + 'px';
         });
     </script>
+
+
+<img id="bolinha" src="Pokebola-pokeball-png-0-removebg-preview.png" alt="Bolinha2">
+    
+
+    <script>
+        const bolinha2 = document.getElementById('bolinha');
+        let x2 = window.innerWidth / 2;
+        let y2 = window.innerHeight / 2;
+        const velocidade2 = 30;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'w') y -= velocidade;
+            if (e.key === 's') y += velocidade;
+            if (e.key === 'a') x -= velocidade;
+            if (e.key === 'd') x += velocidade;
+
+            // Limita dentro da tela
+            x = Math.max(25, Math.min(x, window.innerWidth - 25));
+            y = Math.max(25, Math.min(y, window.innerHeight - 25));
+
+            bolinha2.style.left = x + 'px';
+            bolinha2.style.top = y + 'px';
+        });
+    </script>
+
+
+
 </body>
 </html>
